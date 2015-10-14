@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote  name="github"
+           fetch="https://github.com"
+           review="" />
+
+  <remote  name="oe"
+           fetch="git://git.openembedded.org/"
+           review="" />
+
+  <!--    Chromium repos  -->
+  <project path="meta-browser" remote="github" name="linaro-home/meta-browser" revision="chromium_45" />
+  <!--    Qualcomm layers  -->
+  <project path="meta-qcom" remote="github" name="ndechesne/meta-qcom" revision="master" />
+  <!-- Linaro Open SDK -->
+  <project path="meta-los" remote="github" name="cpriouzeau/meta-los" revision="master" />
+  <!-- Open Embedded layers -->
+  <project path="openembedded-core" remote="oe" name="openembedded-core" revision="master" />
+  <project path="openembedded-core/bitbake" remote="oe" name="bitbake" revision="master" />
+  <project path="meta-openembedded" remote="oe" name="meta-openembedded" revision="master" />
+</manifest>
