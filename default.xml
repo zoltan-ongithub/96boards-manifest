@@ -10,7 +10,7 @@
            review="" />
 
   <!--    Chromium repos  -->
-  <project path="meta-browser" remote="github" name="linaro-home/meta-browser" revision="chromium_45" />
+  <project path="meta-browser" remote="github" name="linaro-home/meta-browser" revision="dev_chromium_45" />
   <!--    Qualcomm layers  -->
   <project path="meta-qcom" remote="github" name="ndechesne/meta-qcom" revision="master" />
   <!-- Linaro Open SDK -->
