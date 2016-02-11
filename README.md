@@ -1,13 +1,16 @@
-# 96boards-manifest
-Non-official repo manifest for 96boards OE builds
 
-Usage:
+# 96boards-manifest
+Non-official repo manifest for 96boards OE builds. This guide assumes that you are already flashed a
+bootloader and a partition table to the board as it is described here:
+
+https://github.com/96boards/documentation/wiki/HiKeyGettingStarted#debian-linux-os
+
+# Build instructions
 
 ```
 # repo init -u https://github.com/kuscsik/96boards-manifest.git -b hikey
 # repo sync
 ```
-
 
 Get the graphics drivers from here 
 
