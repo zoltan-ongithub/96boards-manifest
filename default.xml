@@ -16,7 +16,7 @@
   <!-- Linaro Open SDK -->
   <project path="meta-los" remote="github" name="kuscsik/meta-los" revision="hikey" />
   <!-- Open Embedded layers -->
-  <project path="openembedded-core" remote="oe" name="openembedded-core" revision="jethro" />
-  <project path="openembedded-core/bitbake" remote="oe" name="bitbake" revision="1.28" />
-  <project path="meta-openembedded" remote="oe" name="meta-openembedded" revision="jethro" />
+  <project path="openembedded-core" remote="github" name="openembedded/openembedded-core" revision="jethro" />
+  <project path="openembedded-core/bitbake" remote="github" name="openembedded/bitbake" revision="1.28" />
+  <project path="meta-openembedded" remote="github" name="openembedded/meta-openembedded" revision="jethro" />
 </manifest>
