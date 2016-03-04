@@ -25,7 +25,7 @@ and place the tar package in the following folder:
 Build the image:
 
 ```
-$ source ./meta-los/script/envsetup
+$ source ./meta-los/script/envsetup.sh
 $ bitbake los-weston-image
 ```
 
