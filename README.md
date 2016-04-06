@@ -66,6 +66,14 @@ Reboot.
 
 # Running EME test
 
+For the EME test you will need to build the Chromium image:
+
+```
+$ bitbake los-weston-image
+```
+
+and on the target run:
+
 ```
 $ modpropbe optee
 $ modprobe optee_armtz
