@@ -69,7 +69,7 @@ Reboot.
 For the EME test you will need to build the Chromium image:
 
 ```
-$ bitbake los-weston-image
+$ los-chromium-image
 ```
 
 and on the target run:
