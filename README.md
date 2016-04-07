@@ -5,6 +5,8 @@ bootloader and a partition table to the board as it is described here:
 
 https://github.com/96boards/documentation/wiki/HiKeyGettingStarted#debian-linux-os
 
+# Host machine setup
+
 The build instructions are tested on Ubuntu 14.04. On a clean Ubuntu 14.04 install you will need some additional packages:
 
 ```
