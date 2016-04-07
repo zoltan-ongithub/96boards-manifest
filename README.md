@@ -107,3 +107,51 @@ $ /usr/bin/chromium/chrome --no-sandbox  \
 ```
 
 Select "External Clearkey" key system and hit Play.
+
+# Microsoft Playready CDM
+
+The following steps are for Linaro members only. For Playready CDM build you will need clone the meta-lhg-prop
+OE from the private repositories:
+
+```
+git clone ssh://lhg-review.linaro.org:29418/lhg/meta-lhg-prop
+```
+
+```
+$ source ./meta-los/script/envsetup.sh
+```
+Edit the conf/local.conf file and add the following line: 
+```
+ENABLE_MS_PLAYREADY = "1"
+```
+
+Add the meta-lhg-prop layer to the conf/bblayers.conf file (note the space before ${OEROOT) :
+```
+ BBLAYERS += " ${OEROOT}/meta-lhg-prop"
+```
+Build the image:
+
+```
+$ bitbake los-chromium-image
+```
+
+After flashing the image:
+
+```
+$ modpropbe optee
+$ modprobe optee_armtz
+$ tee-supplicant &
+$ portmap &
+$ cdmiservice &
+
+$ /usr/bin/chromium/chrome --no-sandbox  \
+    --use-gl=egl --ozone-platform=wayland --no-sandbox --composite-to-mailbox --in-process-gpu --enable-low-end-device-mode \
+    --enable-logging --v=0 \
+    --start-maximized \
+    --user-data-dir=data_dir \
+    --blink-platform-log-channels=Media\
+    --register-pepper-plugins="/usr/lib/chromium/libopencdmadapter.so#ClearKey CDM#ClearKey CDM0.1.0.0#0.1.0.0;application/x-ppapi-open-cdm" \
+   http://people.linaro.org/~zoltan.kuscsik/dash.js/samples/dash-if-reference-player/eme.html
+   ```
+
+Select the Microsoft Cenc #Linaro stream and hit Play.
