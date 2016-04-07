@@ -41,13 +41,13 @@ Build the image:
 
 ```
 $ source ./meta-los/script/envsetup.sh
-$ bitbake los-weston-image
+$ bitbake los-chromium-image
 ```
 
 Inside the OE image deploy folder convert the ext4 image to a fastboot sparse image
 
 ```
-$ ext2simg los-weston-image-hikey.ext4 los-weston-image-hikey.img
+$ ext2simg los-chromium-image-hikey.ext4 los-chromium-image-hikey.img
 ```
 
 and flash it using fastboot
@@ -87,13 +87,7 @@ Reboot.
 
 # Running EME test
 
-For the EME test you will need to build the Chromium image:
-
-```
-$ bitbake los-chromium-image
-```
-
-and on the target run:
+On the target run:
 
 ```
 $ modpropbe optee
