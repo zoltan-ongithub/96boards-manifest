@@ -141,7 +141,7 @@ Build the image:
 $ bitbake los-chromium-image
 ```
 
-Please note that you need flash a prebuilt fip.bin from the meta-96boards/prebuilt folder. 
+Please note that you need flash a prebuilt fip.bin from the meta-96boards/prebuilt folder (see the instructions above).
 
 After flashing the image:
 
