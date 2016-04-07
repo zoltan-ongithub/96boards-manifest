@@ -10,7 +10,7 @@ https://github.com/96boards/documentation/wiki/HiKeyGettingStarted#debian-linux-
 The build instructions are tested on Ubuntu 14.04. On a clean Ubuntu 14.04 install you will need some additional packages:
 
 ```
-sudo apt-get install gawk wget git-core diffstat unzip texinfo gcc-multilib \
+$ sudo apt-get install gawk wget git-core diffstat unzip texinfo gcc-multilib \
     build-essential chrpath libsdl1.2-dev xterm
 ```
 
@@ -23,8 +23,8 @@ You most likely noticed that the Hikey has no ethernet connector. The image was 
 # Build instructions
 
 ```
-# repo init -u https://github.com/kuscsik/96boards-manifest.git -b hikey
-# repo sync
+$ repo init -u https://github.com/kuscsik/96boards-manifest.git -b hikey
+$ repo sync
 ```
 
 Get the graphics drivers from here 
@@ -53,13 +53,13 @@ $ ext2simg los-weston-image-hikey.ext4 los-weston-image-hikey.img
 and flash it using fastboot
 
 ```
-$ fastboot flash system los-weston-image-hikey.img
+$ sudo fastboot flash system los-weston-image-hikey.img
 ```
 
 Flash a prebuilt fip.bin:
 
 ```
-sudo fastboot flash fastboot meta-96boards/prebuilt/fip.bin
+$ sudo fastboot flash fastboot meta-96boards/prebuilt/fip.bin
 ```
 
 Get the boot-fat.uefi.img.gz from here:
