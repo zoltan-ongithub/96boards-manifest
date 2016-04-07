@@ -56,6 +56,12 @@ and flash it using fastboot
 $ fastboot flash system los-weston-image-hikey.img
 ```
 
+Flash a prebuilt fip.bin:
+
+```
+sudo fastboot flash fastboot meta-96boards/prebuilt/fip.bin
+```
+
 Get the boot-fat.uefi.img.gz from here:
 
 https://builds.96boards.org/snapshots/hikey/linaro/debian/latest/https://builds.96boards.org/snapshots/hikey/linaro/debian/latest/ 
@@ -134,6 +140,8 @@ Build the image:
 ```
 $ bitbake los-chromium-image
 ```
+
+Please note that you need flash a prebuilt fip.bin from the meta-96boards/prebuilt folder. 
 
 After flashing the image:
 
