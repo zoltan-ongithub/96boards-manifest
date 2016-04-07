@@ -64,7 +64,7 @@ $ sudo fastboot flash fastboot meta-96boards/prebuilt/fip.bin
 
 Get the boot-fat.uefi.img.gz from here:
 
-https://builds.96boards.org/snapshots/hikey/linaro/debian/latest/https://builds.96boards.org/snapshots/hikey/linaro/debian/latest/ 
+https://builds.96boards.org/snapshots/hikey/linaro/debian/latest/
 
 And replace the default grub.cfg with the one from meta-los:
 
