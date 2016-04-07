@@ -5,6 +5,17 @@ bootloader and a partition table to the board as it is described here:
 
 https://github.com/96boards/documentation/wiki/HiKeyGettingStarted#debian-linux-os
 
+The build instructions are tested on Ubuntu 14.04. On a clean Ubuntu 14.04 install you will need some additional packages:
+
+sudo apt-get install gawk wget git-core diffstat unzip texinfo gcc-multilib \
+    build-essential chrpath libsdl1.2-dev xterm
+
+The following issue was also reported with host machine setup. OP TEE build depneds on python crypto. If your have problem installing it, check the following link:
+
+https://github.com/OP-TEE/optee_os/issues/663
+
+You most likely noticed that the Hikey has no ethernet connector. The image was tested with an Apple USB Ethernet adapter.
+
 # Build instructions
 
 ```
