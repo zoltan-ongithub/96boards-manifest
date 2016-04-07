@@ -142,7 +142,7 @@ $ modpropbe optee
 $ modprobe optee_armtz
 $ tee-supplicant &
 $ portmap &
-$ cdmiservice &
+$ cd /usr/share/playready && cdmiservice &
 
 $ /usr/bin/chromium/chrome --no-sandbox  \
     --use-gl=egl --ozone-platform=wayland --no-sandbox --composite-to-mailbox --in-process-gpu --enable-low-end-device-mode \
