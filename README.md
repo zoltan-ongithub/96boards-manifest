@@ -27,7 +27,7 @@ $ repo init -u https://github.com/kuscsik/96boards-manifest.git -b hikey
 $ repo sync
 ```
 
-Get the graphics drivers from here 
+Get the graphics drivers from here
 
 https://drive.google.com/a/linaro.org/file/d/0B8Uq4Q7WAxO4ZjJLdGJQR01DRkE/view?usp=sharing
 
@@ -44,7 +44,7 @@ $ source ./meta-los/script/envsetup.sh
 $ bitbake los-chromium-image
 ```
 
-Inside the OE image deploy folder convert the ext4 image to a fastboot sparse image
+Inside the OE image deploy folder (build/tmp-glibc/deploy/images/hikey) convert the ext4 image to a fastboot sparse image
 
 ```
 $ ext2simg los-chromium-image-hikey.ext4 los-chromium-image-hikey.img
@@ -53,7 +53,7 @@ $ ext2simg los-chromium-image-hikey.ext4 los-chromium-image-hikey.img
 and flash it using fastboot
 
 ```
-$ sudo fastboot flash system los-weston-image-hikey.img
+$ sudo fastboot flash system los-chromium-image-hikey.img
 ```
 
 Flash a prebuilt fip.bin:
@@ -71,9 +71,9 @@ And replace the default grub.cfg with the one from meta-los:
 ```
 $ mkdir -p boot-fat
 $ sudo mount -o loop,rw,sync boot-fat.uefi.img boot-fat
-$ cp conf/grub.cfg boot-fat/EFI/BOOT/
+$ sudo cp conf/grub.cfg boot-fat/EFI/BOOT/
 $ sync
-$ sudo umount boot-fat.uefi.img
+$ sudo umount boot-fat
 $ fastboot flash boot boot-fat.uefi.img
 ```
 
@@ -87,7 +87,7 @@ Reboot.
 
 # Running EME test
 
-On the target run:
+On the target, after logging in as root, run:
 
 ```
 $ modpropbe optee
@@ -120,7 +120,7 @@ git clone ssh://lhg-review.linaro.org:29418/lhg/meta-lhg-prop
 ```
 $ source ./meta-los/script/envsetup.sh
 ```
-Edit the conf/local.conf file and add the following line: 
+Edit the conf/local.conf file and add the following line:
 ```
 ENABLE_MS_PLAYREADY = "1"
 ```
