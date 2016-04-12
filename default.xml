@@ -12,9 +12,9 @@
   <!--    Chromium repos  -->
   <project path="meta-browser" remote="github" name="linaro-home/meta-browser" revision="chromium_45" />
   <!--    Qualcomm layers  -->
-  <project path="meta-96boards" remote="github" name="kuscsik/meta-96boards" revision="hikey" />
+  <project path="meta-96boards" remote="github" name="kuscsik/meta-96boards" revision="hikey_dev" />
   <!-- Linaro Open SDK -->
-  <project path="meta-los" remote="github" name="kuscsik/meta-los" revision="hikey" />
+  <project path="meta-los" remote="github" name="kuscsik/meta-los" revision="hikey_dev" />
   <!-- Open Embedded layers -->
   <project path="openembedded-core" remote="github" name="openembedded/openembedded-core" revision="jethro" />
   <project path="openembedded-core/bitbake" remote="github" name="openembedded/bitbake" revision="1.28" />
