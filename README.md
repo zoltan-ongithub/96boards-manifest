@@ -90,8 +90,6 @@ Reboot.
 On the target, after logging in as root, run:
 
 ```
-$ modpropbe optee
-$ modprobe optee_armtz
 $ tee-supplicant &
 $ portmap &
 $ cdmiservice &
@@ -140,8 +138,6 @@ Please note that you need flash a prebuilt fip.bin from the meta-96boards/prebui
 After flashing the image:
 
 ```
-$ modpropbe optee
-$ modprobe optee_armtz
 $ tee-supplicant &
 $ portmap &
 $ cd /usr/share/playready && cdmiservice &
