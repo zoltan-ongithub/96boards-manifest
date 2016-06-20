@@ -27,15 +27,6 @@ $ repo init -u https://github.com/kuscsik/96boards-manifest.git -b hikey_dev
 $ repo sync
 ```
 
-Get the graphics drivers from here
-
-https://drive.google.com/a/linaro.org/file/d/0B8Uq4Q7WAxO4ZjJLdGJQR01DRkE/view?usp=sharing
-
-and place the tar package in the following folder:
-
-```
-~/Public/oe-downloads/
-```
 
 Build the image:
 
